@@ -5,6 +5,7 @@ body {
   font-weight : 400;
   line-height: 1.4;
   font-family: 'Nanum Gothic', sans-serif;
+  height: 3000px;
 }
 img {
   display : block;
@@ -17,11 +18,65 @@ a {
   margin:0 auto;
   position : relative;
 }
+.btn {
+  width : 130px;
+  padding : 10px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  color : #333;
+  font-size : 16px;
+  font-weight: 700;
+  text-align: center;
+  cursor : pointer;
+  box-sizing: border-box;
+  display : block;
+  transition: .4s;
+}
+.btn:hover {
+  background-color : #333;
+  color : #fff;
+}
+.btn.btn--reverse {
+  background-color : #333;
+  color : #fff;
+}
+.btn.btn--reverse:hover {
+  background-color : transparent; /* transparent=투명 */
+  color : #333;
+}
+.btn.btn--brown {
+  background-color : transparent;
+  color : #592b18;
+}
+.btn.btn--brown:hover {
+  background-color : #592b18;
+  color : #fff;
+}
+.btn.btn--gold {
+  background-color : transparent;
+  color : #d9aa8a;
+}
+.btn.btn--gold:hover {
+  background-color :#d9aa8a; 
+  color : #fff ;
+}
+.btn.btn--white {
+  background-color : transparent;
+  color : #fff;
+}
+.btn.btn--white:hover {
+  background-color : #fff;
+  color : #333;
+}
 
 /* HEADER */
 header {
+  width : 100%;
   background-color : #f6f5f0;
   border-bottom : 1px solid #c8c8c8;
+  position : fixed;  /* 블록요소는 width값이 최대한으로 늘어나려하지만 position:absolute와 fixed는 최소한으로 줄어드려는 속성이 생김 */
+  top : 0;
+  z-index: 9;
 }
 
 header > .inner {
@@ -192,7 +247,74 @@ header .main-menu .item .item__contents .contents__texture p {
   margin : 4px 0 14px;
 }
 
+header .badges{
+  position : absolute;
+  top : 132px;
+  right : 12px;
+
+}
+header .badges .badge {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  box-shadow: 4px 4px 10px rgba(0,0,0,.15); /* box-shadow : x축 y축 블러 색상값 => 요소그림자 */
+  cursor:pointer;
+}
 
 
+/* VISUAL */
+.visual {
+  margin-top : 120px;
+  background-image : url("../images/visual_bg.jpg");
+  background-position : center;
+}
 
+.visual .inner {
+  height: 646px;
+}
 
+.visual .title {
+  position : absolute;
+  top : 88px;
+  left: -10px;
+} 
+
+.visual .title .btn {
+  position : absolute;
+  top : 259px;
+  left: 173px;
+}
+
+.visual .cup1.image {
+  position :absolute;
+  bottom : 0;
+  right : -47px;
+} 
+
+.visual .cup1.text {
+  position : absolute;
+  top : 38px;
+  right : 171px;
+}
+
+.visual .cup2.image{
+  position : absolute;
+  bottom : 0;
+  right : 162px;
+}
+
+.visual .cup2.text {
+  position : absolute;
+  top : 321px;
+  right : 416px;
+}
+
+.visual .spoon {
+  position : absolute;
+  bottom : 0;
+  left:275px;
+}
+
+.visual .fade-in {
+  opacity: 0;
+}
