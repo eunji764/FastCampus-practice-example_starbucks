@@ -21,21 +21,33 @@
   <meta property="twitter:url" content="https://starbucks.co.kr" />
 
   <link rel="icon" href="./favicon.png" />
+
+  <!-- GoogleFonts -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- GoogleIcons -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
   <link rel="stylesheet" href="./css/main.css" />
   
+  <!-- Lodash -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- Gsap & ScrollToPlugin -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollToPlugin.min.js" integrity="sha512-1OG9UO4krPizjtz/c9iDbjCqtXznBYdJeD4ccPaYfJHzC6F1qoQ3P1bgQ3J8lgCoK5qGVCqsY4+/RKjLDzITVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   
   <!-- SWIPER -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-  <!-- <script defer src="./js/youtube.js"></script> -->
+  <!-- ScrollMagic -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script defer src="./js/youtube.js"></script>
   <script defer src="./js/main.js"></script>
 
 </head>
@@ -495,9 +507,182 @@
 
       <img src="./images/floating1.png" alt="icon" class="floating floating1">
       <img src="./images/floating2.png" alt="icon" class="floating floating2">
-      <img src="./images/floating3.png" alt="icon" class="floating floating3">
 
     </div>
   </section>
+
+  <!-- SEASON PRODUCT -->
+  <section class="season-product scroll-spy">
+
+    <div class="inner">
+
+      <img src="./images/floating3.png" alt="icon" class="floating floating3">
+      <img src="./images/season_product_image.png" alt="season_product" class="product back-to-position to-right delay-0"  />
+      
+      <div class="text-group">
+        <img src="./images/season_product_text1.png" alt="상쾌하게 여름을 밝혀줄 시즌 원두 아이스 커피 블렌드" class="title back-to-position to-left delay-1" />
+        <img src="./images/season_product_text2.png" alt="아프리카와 라틴아메리카 커피의 블렌드로 시트러스향과 은은한 캐러멜 향을 ...." class="description back-to-position to-left delay-2" />
+        <div class="more back-to-position to-left delay-3">
+          <a href="javascript:void(0)" class="btn ">자세히 보기</a>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- RESERVE COFFEE -->
+  <section class="reserve-coffee scroll-spy">
+
+    <div class="inner">
+      <img src="./images/reserve_logo.png" alt="reserve_logo" class="reserve-logo back-to-position to-right delay-0" />
+      
+      <div class="text-group">
+        <img src="./images/reserve_text.png" alt="스타벅스 리저브 커피" class="description back-to-position to-right delay-1" />
+        <div class="more back-to-position to-right delay-2">
+          <a href="javascript:void(0)" class="btn btn--gold">자세히 보기</a>
+        </div>
+      </div>
+
+      <img src="./images/reserve_image.png" alt="reserve_image" class="product back-to-position to-left delay-3" />
+    </div>
+  </section>
+
+  <!-- PICK YOUR FAVORITE -->
+  <section class="pick-your-favorite scroll-spy">
+    <div class="inner">
+      <div class="text-group">
+        <img src="./images/favorite_text1.png" alt="Pick Your Favorite" class="title back-to-position to-right delay-0" />
+        <img src="./images/favorite_text2.png" alt="다양한 메뉴를 스타벅스에서 즐겨보세요" class="description back-to-position to-right delay-1" />
+        <div class="more back-to-position to-right delay-2">
+          <a href="javascript:void(0)" class="btn btn--white" >자세히 보기</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESERVE STORE -->
+  <section class="reserve-store">
+    <div class="inner">
+      <div class="medal">
+        <div class="front">
+          <img src="./images/reserve_store_medal_front.png" alt="medal_front" />
+        </div>
+        <div class="back">
+          <img src="./images/reserve_store_medal_back.png" alt="medal_back" />
+          <a href="javascript:void(0)" class="btn">매장 안내</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FIND THE STORE -->
+  <section class="find-store scroll-spy">
+
+    <div class="inner">
+
+      <img src="./images/find_store_texture1.png" alt="texture1" class="texture1" />
+      <img src="./images/find_store_texture2.png" alt="texture2" class="texture2" />
+      <img src="./images/find_store_picture1.jpg" alt="store1" class="picture picture1 back-to-position to-right delay-0" />
+      <img src="./images/find_store_picture2.jpg" alt="store2" class="picture picture2 back-to-position to-right delay-1" />
+
+      <div class="text-group">
+        <img src="./images/find_store_text1.png" alt="스타벅스를 가까이에서 경험해보세요" class="title back-to-position to-left delay-0" />
+        <img src="./images/find_store_text2.png" alt="차별화된 경험을 누릴 수 있는 리저브 매장" class="description back-to-position to-left delay-1" />
+        <div class="more back-to-position to-left delay-2">
+          <a href="javascript:void(0)" class="btn" >매장찾기</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- AWARDS -->
+  <section class="awards">
+    <div class="inner">
+
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./images/awards_slide1.jpg" alt="2015일자리창출 대통령표창"  />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/awards_slide2.jpg" alt="2015 고용창출 우수100대기업 대통령표창(3년연속)"  />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/awards_slide3.jpg" alt="2015 장애인 고용 우수사업주인증"  />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/awards_slide4.jpg" alt="2015 농림축산식품부 상생협력 경연대회 대상"  />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/awards_slide5.jpg" alt="2015 기업혁신대상 대한상의회장상"  />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/awards_slide6.jpg" alt="2015 대한민국 청소년육성대상 기업사회공헌 활동 부문"  />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/awards_slide7.jpg" alt="2015 대한민국 지속가능성 지수 KIS1위(5년연속)"  />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/awards_slide8.jpg" alt="2015 대한민국 서비스품질지수 KS-SQI 1위(5년연속)"  />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/awards_slide9.jpg" alt="2015 소비자선정 최고의 브랜드데상 커피전문점 부문(4년연속)"  />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/awards_slide10.jpg" alt="2015 코리아 탑브랜드 대상 동반성장 부문(4년연속)"  />
+          </div>
+        </div>
+      </div>
+ 
+      <div class="swiper-prev">
+        <div class="material-icons">arrow_back</div>
+      </div>
+      <div class="swiper-next">
+        <div class="material-icons">arrow_forward</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="inner">
+
+      <ul class="menu">
+        <li><a href="javascript:void(0)" class="green">개인정보처리방침</a></li>
+        <li><a href="javascript:void(0)">영상정보처리기기 운영관리 방침</a></li>
+        <li><a href="javascript:void(0)">홈페이지 이용약관</a></li>
+        <li><a href="javascript:void(0)">위치정보 이용약관</a></li>
+        <li><a href="javascript:void(0)">스타벅스 카드 이용약관</a></li>
+        <li><a href="javascript:void(0)">윤리경영 핫라인</a></li>
+      </ul>
+
+      <div class="btn-group">
+        <a href="javascript:void(0)" class="btn btn--white">찾아오시는 길</a>
+        <a href="javascript:void(0)" class="btn btn--white">신규입점제의</a>
+        <a href="javascript:void(0)" class="btn btn--white">사이트 맵</a>
+      </div>
+
+      <div class="info">
+        <span>사업자등록번호 201-81-21515</span>
+        <span>(주)스타벅스 코리아 대표이사 이석구</span>
+        <span>TEL : 02) 3015-1100 / FAX : 02) 3015-1106</span>
+        <span>개인정보 책임자 : 강기원</span>
+      </div>
+
+      <p class="copyright">
+        &copy; <span class="this-year"></span> Starbucks Coffee Company. All Rights Reserved.
+      </p>
+      <img src="./images/starbucks_logo_only_text.png" alt="logo_text" class="logo" />
+    </div>
+  </footer>
+
+
+  <div id="to-top">
+    <div class="material-icons">arrow_upward</div>
+  </div>
+
 </body>
 </html>

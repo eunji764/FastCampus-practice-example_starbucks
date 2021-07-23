@@ -17,7 +17,9 @@ searchInputEl.addEventListener('blur', function(){
 });
 
 
+// 스크롤 배지 & ScrollToTop
 const badgeEl = document.querySelector('header .badges');
+const toTopEl = document.querySelector('#to-top');
 // document = html자체, window = 프로젝트가 나타나고있는 브라우저창을 말함 우리가보고있는 화면자체
 window.addEventListener('scroll', _.throttle(function(){
   if(window.scrollY>500){
@@ -26,15 +28,27 @@ window.addEventListener('scroll', _.throttle(function(){
       opacity : 0,
       display : 'none'
     });
+    gsap.to(toTopEl, .2, {
+      x : 0
+    });
   } else {
     // 배지 보여주기
     gsap.to(badgeEl, .6, {
       opacity : 1,
       display : 'block'
     });
+    gsap.to(toTopEl, .2, {
+      x : 100
+    });
   }
 }, 300));
 //_.throttle(함수,시간(밀리세컨단위)) => 함수에 밀리세컨시간만큼 부하를 줘서 함수가 우르르실행되는걸 방지함, 스크롤이벤트와 관련된 작업할때 사용함
+
+toTopEl.addEventListener('click', function(){
+  gsap.to(window, .7,{
+    scrollTo : 0
+  });
+});
 
 
 const fadeEls = document.querySelectorAll('.visual .fade-in');
@@ -46,12 +60,18 @@ fadeEls.forEach(function(fadeEl, index){
   })
 })
 
+
+// 공지슬라이드
+
 // new Swiper(선택자, 옵션)
 new Swiper('.notice-line .swiper-container', {
   direction : 'vertical',
   autoplay : true,
   loop : true
 });
+
+
+// 프로모션 슬라이드
 
 new Swiper('.promotion .swiper-container', {
   // direction : 'horizontal' => 기본값
@@ -69,6 +89,19 @@ new Swiper('.promotion .swiper-container', {
   navigation : {
     prevEl : '.promotion .swiper-prev',
     nextEl : '.promotion .swiper-next'
+  }
+});
+
+// AWARDS 슬라이드
+
+new Swiper('.awards .swiper-container', {
+  autoplay : true,
+  loop : true,
+  spaceBetween : 30,
+  slidesPerView : 5,
+  navigation : {
+    prevEl : '.awards .swiper-prev',
+    nextEl : '.awards .swiper-next',
   }
 });
 
@@ -113,3 +146,21 @@ floatingObject('.floating3', 1.5, 20);
 
 
 
+const spyEls = document.querySelectorAll('section.scroll-spy');
+spyEls.forEach(function (spyEl) {
+  new ScrollMagic
+    .Scene({
+      triggerElement: spyEl, // 보여짐 여부를 감시할 요소를 지정
+      triggerHook: .8
+    })
+    // setClassToggle(요소, '토글할클래스이름')
+    .setClassToggle(spyEl, 'show')
+    .addTo(new ScrollMagic.Controller());
+});
+
+
+
+
+// this-year
+const thisYear = document.querySelector('.this-year');
+thisYear.textContent = new Date().getFullYear();
